@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="lab3.js"></script>
+    <style>
+        .output {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+<h1>Late Fee Calculator</h1>
+
+<label for="numOfBooks">Number of books</label>
+<input type="number" id="numOfBooks" min="0">
+<br>
+<label for="numOfDvds">Number of DVDs</label>
+<input type="number" id="numOfDvds" min="0">
+<br>
+<label for="numDaysLate">Number of days late</label>
+<input type="number" id="numDaysLate" min="0">
+<br>
+<button>Calculate Total Fee</button>
+
+<p class="output">It will cost $<span id="fee"></span> for the late products.</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="jquery-3.6.0.js"></script>
+<script src="lab3.js"></script>
 
 </body>
 </html>

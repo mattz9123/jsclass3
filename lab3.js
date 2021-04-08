@@ -1,13 +1,23 @@
-let books = 0.25;
-let dvds = 0.50;
-let dailyFee = 0;
+$(document).ready(function () {
+    $("button").on("click", calculate);
+})
 
-let numBooks = prompt('How many books do you have? ');
-let numDvd = prompt('How many DVDs do you have? ');
-let daysLate = prompt('How many days late are your books and DVDs? ');
-dailyFee = (numBooks * books) + (numDvd * dvds);
-totalFee = dailyFee * daysLate
-totalFee = totalFee.toFixed(2);
 
-alert(`You have ${numBooks} books and ${numDvd} DVDs that are ${daysLate} 
-days late, costing a total of $${totalFee}`)
+function calculate() {
+
+
+    let books = 0.25;
+    let dvds = 0.50;
+    let dailyFee = 0;
+
+    let numBooks = parseFloat( $("#numOfBooks").val() );
+    let numDvd = parseFloat( $("#numOfDvds").val() );
+    let daysLate = parseFloat( $("#numDaysLate").val() );
+    dailyFee = (numBooks * books) + (numDvd * dvds);
+    let totalFee = dailyFee * daysLate
+    totalFee = totalFee.toFixed(2);
+
+    $("span#fee").text(totalFee);
+
+    $(".output").show();
+}
